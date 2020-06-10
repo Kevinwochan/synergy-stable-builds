@@ -10,6 +10,27 @@ or without changes.
 Just use "hm conf" and "hm build" to compile (./hm.sh on
 Linux and Mac).
 
+## Windows
+```
+ hm conf -g1
+ hm build
+ ```
+## Unix and Linux
+Ubuntu 20.4 has dropped suport for libqt4, add the unofficial repo
+```
+sudo add-apt-repository ppa:rock-core/qt4
+sudo apt-get update
+
+sudo apt install cmake libx11-dev libxtst-dev  libqt4-dev
+ ./hm.sh conf -g1 [-d] # Use -d to build a debug version.
+ ./hm.sh build [-d]
+ ```
+## Mac OS X
+```
+ ./hm.sh conf -g1 [-d] --mac-sdk 10.11 --mac-identity Yosemite # Use -d to build a debug version and replace 10.11 / Yosemite with correct versions of your setup.
+ ./hm.sh build [-d]
+ ```
+
 For detailed compile instructions:
 https://github.com/symless/synergy/wiki/Compiling
 
