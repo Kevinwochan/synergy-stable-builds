@@ -21,7 +21,7 @@ Ubuntu 20.4 has dropped suport for libqt4, add the unofficial repo
 sudo add-apt-repository ppa:rock-core/qt4
 sudo apt-get update
 
-sudo apt install cmake libx11-dev libxtst-dev  libqt4-dev
+ sudo apt-get install cmake make g++ xorg-dev libqt4-dev libcurl4-openssl-dev libavahi-compat-libdnssd-dev libssl-dev libx11-dev
  ./hm.sh conf -g1 [-d] # Use -d to build a debug version.
  ./hm.sh build [-d]
  ```
