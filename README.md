@@ -22,8 +22,31 @@ sudo add-apt-repository ppa:rock-core/qt4
 sudo apt-get update
 
  sudo apt-get install cmake make g++ xorg-dev libqt4-dev libcurl4-openssl-dev libavahi-compat-libdnssd-dev libssl-dev libx11-dev
- ./hm.sh conf -g1 [-d] # Use -d to build a debug version.
- ./hm.sh build [-d]
+
+Now you’re in the source directory you need to run the configure step
+# QT_SELECT=4 is only necessary if you have newer QT versions
+QT_SELECT=4 ./hm.sh conf -g1
+Note: If you see an error “Error: Could not get revision, git error: 128” you can safely ignore it.
+
+Then:
+
+./hm.sh build
+If you get an error “Error: make -w failed with error: 512″ you can ignore that too.
+
+Now you can the build the GUI app.
+
+cd src/gui
+qmake
+make
+Go back to the source root and copy all the built binaries to /usr/local/bin
+
+cd ../../
+sudo cp bin/syn* /usr/local/bin
+Then run the Synergy GUI,
+
+/usr/local/bin/synergy &
+In the GUI you can configure the server you will connect to, and enter your license key, if you have one.
+
  ```
 ## Mac OS X
 ```
