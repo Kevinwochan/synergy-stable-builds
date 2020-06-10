@@ -807,7 +807,7 @@ SecureSocket::showSecureCipherInfo()
 
 	// m_ssl->m_ssl->session->ciphers is not forward compatable, In future release
 	// of OpenSSL, it's not visible, need to use SSL_get_client_ciphers() instead
-	STACK_OF(SSL_CIPHER) * cStack = m_ssl->m_ssl->session->ciphers;
+	STACK_OF(SSL_CIPHER) * cStack = SSL_get_client_ciphers(m_ssl->m_ssl);
 		if (cStack == NULL) {
 		LOG((CLOG_DEBUG1 "remote cipher list not available"));
 	}
