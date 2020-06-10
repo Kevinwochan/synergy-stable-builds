@@ -58,3 +58,11 @@ For detailed compile instructions:
 https://github.com/symless/synergy/wiki/Compiling
 
 Happy hacking!
+
+# Running
+""
+## Setting up the server
+Set as server -> Configure Server -> Drag the screen at the top right onto an empty square -> double click the screen -> set the name of the client device as it appears in your error logs -> ok -> start in the bottom right
+
+## Setting up the client
+Set as Client -> enter the IP address of the server -> start in the bottom right
