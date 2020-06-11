@@ -324,7 +324,7 @@ void MainWindow::initConnections()
 	connect(m_pActionStartSynergy, SIGNAL(triggered()), this, SLOT(startSynergy()));
 	connect(m_pActionStopSynergy, SIGNAL(triggered()), this, SLOT(stopSynergy()));
 	connect(m_pActionQuit, SIGNAL(triggered()), qApp, SLOT(quit()));
-	connect(&m_VersionChecker, SIGNAL(updateFound(const QString&)), this, SLOT(updateFound(const QString&)));
+	// connect(&m_VersionChecker, SIGNAL(updateFound(const QString&)), this, SLOT(updateFound(const QString&)));
 }
 
 void MainWindow::saveSettings()
