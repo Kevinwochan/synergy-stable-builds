@@ -28,7 +28,7 @@
 class SerialKey {
 	friend bool operator== (SerialKey const&, SerialKey const&);
 public:
-	explicit SerialKey(Edition edition = kUnregistered);
+	explicit SerialKey(Edition edition = kPro);
 	explicit SerialKey(std::string serial);
 
 	bool				isExpiring(time_t currentTime) const;
